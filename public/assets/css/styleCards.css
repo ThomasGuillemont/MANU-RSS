@@ -1,0 +1,18 @@
+.background-card, .fixedDiv {
+    background: rgba( 150, 126, 198, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.background-button-card{
+    background-color: #F7F7F7;
+}
+
+.cards-img-border{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}

@@ -1,0 +1,25 @@
+# links follow
+Options +FollowSymlinks 
+# rewrite Apache activate
+RewriteEngine On
+
+# /accueil -> /controllers/home-controller.php
+RewriteRule ^accueil$ /controllers/home-controller.php [L]
+# error 404 -> /404.php
+RewriteRule ^404/?$ 404.php
+ErrorDocument 404 /404.php
+
+# smartphone
+RewriteRule ^smartphone$ /controllers/home-controller.php
+
+# tablet
+RewriteRule ^tablette$ /controllers/home-controller.php
+
+# laptop
+RewriteRule ^ordinateur$ /controllers/home-controller.php
+
+# connectedObjects
+RewriteRule ^objet$ /controllers/home-controller.php
+
+# audio
+RewriteRule ^audio$ /controllers/home-controller.php

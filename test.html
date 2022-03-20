@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="\public\assets\css\style.css" rel="stylesheet">
+    <link href="/public/assets/css/styleCards.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/assets/img/MELT.png" type="image/x-icon">
+    <title>MELT Technologies - Toutes les actualités de la tech</title>
+</head>
+
+<body>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="d-none d-md-flex col-3 col-lg-2 navbarLaptop laptopNav align-items-start flex-column ">
+                <div class="imgLogo">
+                    <img src="../public/assets/img/MELT.png" alt="logo Melt" class="logoLaptop">
+                </div>
+                <div class="bottomContentNav">
+                    <div class="itemsSelector ">
+                        <div>
+                            <h2 class="titleSelector">Nombre d'articles à afficher</h2>
+                        </div>
+                        <form action="" class="formularDiv" name="selectorFormular">
+                            <div class="selectorDiv d-flex justify-content-center">
+                                <label class="labl" id="leftSelector">
+                                    <input type="radio" name="radioname" value="one_value" checked="checked" />
+                                    <div>6</div>
+                                </label>
+                                <label class="labl" id="centerSelector">
+                                    <input type="radio" name="radioname" value="another" />
+                                    <div>9</div>
+                                </label>
+                                <label class="labl" id="rightSelector">
+                                    <input type="radio" name="radioname" value="another" />
+                                    <div>12</div>
+                                </label>
+                            </div>
+                    </div>
+                    <div class="selectors d-flex flex-column align-items-center">
+                        <div>
+                            <h2 class="titleSelector">Catégories</h2>
+                        </div>
+                        <div class="selectorForm">
+                            <div>
+                                <a href="" class="links">Smartphones</a>
+                                <label class="switchSelector">
+                                    <input type="checkbox" id="smartphones" class="selectorLimit">
+                                    <span class="sliderSelector roundSelector"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <a href="" class="links">Tablettes</a>
+                                <label class="switchSelector">
+                                    <input type="checkbox" id="tablettes" class="selectorLimit">
+                                    <span class="sliderSelector roundSelector"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <a href="" class="links">PC portable</a>
+                                <label class="switchSelector">
+                                    <input type="checkbox" id="laptop" class="selectorLimit">
+                                    <span class="sliderSelector roundSelector"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <a href="" class="links">Objets Connectés</a>
+                                <label class="switchSelector">
+                                    <input type="checkbox" id="connectedObjects" class="selectorLimit">
+                                    <span class="sliderSelector roundSelector"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <a href="" class="links">Audio</a>
+                                <label class="switchSelector">
+                                    <input type="checkbox" id="audio" class="selectorLimit">
+                                    <span class="sliderSelector roundSelector"></span>
+                                </label>
+                            </div>
+                            <div id="displaySelectors">
+                                <input type="submit" class="submit" value="Afficher">
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="darkMode d-flex justify-content-evenly">
+                        <div class="light">Light</div>
+                        <div class="toggleDarkMode">
+                            <label class="switch">
+                                <input type="checkbox" id="darkMode">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="dark">Dark</div>
+                    </div>
+                </div>
+
+                <!-- MODAL -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Veuillez sélectionnez 3 catégories maximum</p>
+                    </div>
+                </div>
+            <!-- MOBILE VERSION :  -->
+            </div>
+            <div class="d-md-none col-12 mobileNav">
+                <nav class="navbar navbar-expand-md navbar-light navbarMobile ">
+                    <div class="container-fluid dropdownNav ">
+                        <img src="../public/assets/img/Mobile.png" alt="logo Melt" class="logoMobile">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li>
+                                    <div class="itemsSelector ">
+                                        <div>
+                                            <h2 class="titleSelector">Nombre d'articles à afficher</h2>
+                                        </div>
+                                        <form action="" class="formularDiv">
+                                            <div class="selectorDiv d-flex justify-content-center">
+                                                <label class="labl" id="leftSelector">
+                                                    <input type="radio" name="radioname" value="one_value"
+                                                        checked="checked" />
+                                                    <div>3</div>
+                                                </label>
+                                                <label class="labl" id="centerSelector">
+                                                    <input type="radio" name="radioname" value="another" />
+                                                    <div>6</div>
+                                                </label>
+                                                <label class="labl" id="rightSelector">
+                                                    <input type="radio" name="radioname" value="another" />
+                                                    <div>12</div>
+                                                </label>
+                                            </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectors d-flex flex-column align-items-center">
+                                        <div class="selectorForm">
+                                            <div>
+                                                <a href="" class="links">Smartphones</a>
+                                                <label class="switchSelector">
+                                                    <input type="checkbox" id="smartphones" class="selectorLimit">
+                                                    <span class="sliderSelector roundSelector"></span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <a href="" class="links">Tablettes</a>
+                                                <label class="switchSelector">
+                                                    <input type="checkbox" id="tablettes" class="selectorLimit">
+                                                    <span class="sliderSelector roundSelector"></span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <a href="" class="links">PC portable</a>
+                                                <label class="switchSelector">
+                                                    <input type="checkbox" id="laptop" class="selectorLimit">
+                                                    <span class="sliderSelector roundSelector"></span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <a href="" class="links">Objets Connectés</a>
+                                                <label class="switchSelector">
+                                                    <input type="checkbox" id="connectedObjects " class="selectorLimit">
+                                                    <span class="sliderSelector roundSelector"></span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <a href="" class="links">Audio</a>
+                                                <label class="switchSelector">
+                                                    <input type="checkbox" id="audio" class="selectorLimit">
+                                                    <span class="sliderSelector roundSelector"></span>
+                                                </label>
+                                            </div>
+                                            <div id="displaySelectors">
+                                                <input type="submit" class="submit" value="Afficher">
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="darkMode d-flex justify-content-evenly">
+                                        <div class="light">Light</div>
+                                        <div class="toggleDarkMode">
+                                            <label class="switch">
+                                                <input type="checkbox" id="darkModeMobile">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                        <div class="dark">Dark</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- The Modal -->
+            </div>
+            <div class="col-12 col-md-9 col-lg-10 content offset-md-3 offset-lg-2" id="content">
+                <div class="container-fluid m-0">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-xl-4">
+                            <!-- J'ai ajouté id = theme pour les 3 container-fluid afin d'ajouter du scroll pour chaque theme -->
+                            <div class="container-fluid" id="theme">
+                                <div class="row">
+                                    <div class="fixedDiv sticky-top col-12 text-center">
+                                        <h2 class="themeTitle">theme 1</h2>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/0f02c9/6eb4eefb68ebcde6e61adb5955.png"
+                                                class="card-img-top cards-img-border"
+                                                alt="Espéré pour le mois de juin prochain et la WWDC, le casque d’Apple...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Apple : son casque de réalité mixte em...</h5>
+                                                <p class="fst-italic fw-light">lundi 17 janvier 2022</p>
+                                                <p class="card-text">Espéré pour le mois de juin prochain et la WWDC, le
+                                                    casque d’Apple...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/894/42cf6503e182648a0209f451295db.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Alors que le casque VR d’Apple pourrait être lancé en fin d’ann�...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Apple ne veut pas du metaverse sur son f...</h5>
+                                                <p class="fst-italic fw-light">lundi 10 janvier 2022</p>
+                                                <p class="card-text">Alors que le casque VR d’Apple pourrait être lancé
+                                                    en fin d’ann�...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/ddf/1a8f22a7f488db89e3d1cc34fabea.jpeg"
+                                                class="card-img-top cards-img-border"
+                                                alt="La nouvelle balance connectée de la marque française innove avec sa ...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Withings dévoile Body Scan, une balance...</h5>
+                                                <p class="fst-italic fw-light">mardi 04 janvier 2022</p>
+                                                <p class="card-text">La nouvelle balance connectée de la marque
+                                                    française innove avec sa ...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/756/1f6a75f5787e43ff02f3186eef265.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Le produit iconique de Xiaomi améliore encore son écran mais augment...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Mi Band 6 : le bracelet connecté de Xia...</h5>
+                                                <p class="fst-italic fw-light">lundi 01 novembre 2021</p>
+                                                <p class="card-text">Le produit iconique de Xiaomi améliore encore son
+                                                    écran mais augment...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/cca/c7e85aecb6d60e40c7cad670a4e51.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Sans grand changement qui saute aux yeux, la Series 7 n’est pas port...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Watch Series 7 : Apple agran...</h5>
+                                                <p class="fst-italic fw-light">mercredi 13 octobre 2021</p>
+                                                <p class="card-text">Sans grand changement qui saute aux yeux, la Series
+                                                    7 n’est pas port...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/e63/ac911eb92ccdca5974fdc4d0ddd0d.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Confortable et tout en finesse, le dernier-né de la marque Fitbit se ...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test du Fitbit Luxe : le bracelet connec...</h5>
+                                                <p class="fst-italic fw-light">jeudi 19 août 2021</p>
+                                                <p class="card-text">Confortable et tout en finesse, le dernier-né de la
+                                                    marque Fitbit se ...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/0927/5a6748473a28683a8c68f9d6e77b.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Très endurante, élégante et dotée de nombreux capteurs, la Watch 3...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Huawei Watch 3 : jolie et end...</h5>
+                                                <p class="fst-italic fw-light">jeudi 05 août 2021</p>
+                                                <p class="card-text">Très endurante, élégante et dotée de nombreux
+                                                    capteurs, la Watch 3...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/885/268e22e730eeef25dcfa434ec8007.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Dotée d’un design simple et plaisant, la Summit Lite tourne sous We...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Montblanc Summit Lite : une m...</h5>
+                                                <p class="fst-italic fw-light">mardi 16 mars 2021</p>
+                                                <p class="card-text">Dotée d’un design simple et plaisant, la Summit
+                                                    Lite tourne sous We...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/5a01ae/af01b4a54b0d60ff84affd8c68.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Commercialisée à partir de 249 euros (329 euros pour le grand modèl...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">On a testé l’Oppo Watch, la montre co...</h5>
+                                                <p class="fst-italic fw-light">vendredi 20 novembre 2020</p>
+                                                <p class="card-text">Commercialisée à partir de 249 euros (329 euros
+                                                    pour le grand modèl...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="container-fluid" id="theme">
+                            <!-- J'ai ajouté id = theme pour les 3 container-fluid afin d'ajouter du scroll pour chaque theme -->
+                                <div class="row">
+                                    <div class="fixedDiv sticky-top col-12 text-center">
+                                        <h2 class="themeTitle">theme 2</h2>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/0f02c9/6eb4eefb68ebcde6e61adb5955.png"
+                                                class="card-img-top cards-img-border"
+                                                alt="Espéré pour le mois de juin prochain et la WWDC, le casque d’Apple...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Apple : son casque de réalité mixte em...</h5>
+                                                <p class="fst-italic fw-light">lundi 17 janvier 2022</p>
+                                                <p class="card-text">Espéré pour le mois de juin prochain et la WWDC, le
+                                                    casque d’Apple...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/894/42cf6503e182648a0209f451295db.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Alors que le casque VR d’Apple pourrait être lancé en fin d’ann�...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Apple ne veut pas du metaverse sur son f...</h5>
+                                                <p class="fst-italic fw-light">lundi 10 janvier 2022</p>
+                                                <p class="card-text">Alors que le casque VR d’Apple pourrait être lancé
+                                                    en fin d’ann�...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/ddf/1a8f22a7f488db89e3d1cc34fabea.jpeg"
+                                                class="card-img-top cards-img-border"
+                                                alt="La nouvelle balance connectée de la marque française innove avec sa ...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Withings dévoile Body Scan, une balance...</h5>
+                                                <p class="fst-italic fw-light">mardi 04 janvier 2022</p>
+                                                <p class="card-text">La nouvelle balance connectée de la marque
+                                                    française innove avec sa ...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/756/1f6a75f5787e43ff02f3186eef265.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Le produit iconique de Xiaomi améliore encore son écran mais augment...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Mi Band 6 : le bracelet connecté de Xia...</h5>
+                                                <p class="fst-italic fw-light">lundi 01 novembre 2021</p>
+                                                <p class="card-text">Le produit iconique de Xiaomi améliore encore son
+                                                    écran mais augment...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/cca/c7e85aecb6d60e40c7cad670a4e51.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Sans grand changement qui saute aux yeux, la Series 7 n’est pas port...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Watch Series 7 : Apple agran...</h5>
+                                                <p class="fst-italic fw-light">mercredi 13 octobre 2021</p>
+                                                <p class="card-text">Sans grand changement qui saute aux yeux, la Series
+                                                    7 n’est pas port...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/e63/ac911eb92ccdca5974fdc4d0ddd0d.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Confortable et tout en finesse, le dernier-né de la marque Fitbit se ...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test du Fitbit Luxe : le bracelet connec...</h5>
+                                                <p class="fst-italic fw-light">jeudi 19 août 2021</p>
+                                                <p class="card-text">Confortable et tout en finesse, le dernier-né de la
+                                                    marque Fitbit se ...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/0927/5a6748473a28683a8c68f9d6e77b.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Très endurante, élégante et dotée de nombreux capteurs, la Watch 3...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Huawei Watch 3 : jolie et end...</h5>
+                                                <p class="fst-italic fw-light">jeudi 05 août 2021</p>
+                                                <p class="card-text">Très endurante, élégante et dotée de nombreux
+                                                    capteurs, la Watch 3...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/885/268e22e730eeef25dcfa434ec8007.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Dotée d’un design simple et plaisant, la Summit Lite tourne sous We...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Montblanc Summit Lite : une m...</h5>
+                                                <p class="fst-italic fw-light">mardi 16 mars 2021</p>
+                                                <p class="card-text">Dotée d’un design simple et plaisant, la Summit
+                                                    Lite tourne sous We...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/5a01ae/af01b4a54b0d60ff84affd8c68.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Commercialisée à partir de 249 euros (329 euros pour le grand modèl...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">On a testé l’Oppo Watch, la montre co...</h5>
+                                                <p class="fst-italic fw-light">vendredi 20 novembre 2020</p>
+                                                <p class="card-text">Commercialisée à partir de 249 euros (329 euros
+                                                    pour le grand modèl...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-4">
+                            <div class="container-fluid" id="theme">
+                            <!-- J'ai ajouté id = theme pour les 3 container-fluid afin d'ajouter du scroll pour chaque theme -->
+                                <div class="row">
+                                    <div class="fixedDiv sticky-top col-12 text-center">
+                                        <h2 class="themeTitle">theme 3</h2>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/0f02c9/6eb4eefb68ebcde6e61adb5955.png"
+                                                class="card-img-top cards-img-border"
+                                                alt="Espéré pour le mois de juin prochain et la WWDC, le casque d’Apple...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Apple : son casque de réalité mixte em...</h5>
+                                                <p class="fst-italic fw-light">lundi 17 janvier 2022</p>
+                                                <p class="card-text">Espéré pour le mois de juin prochain et la WWDC, le
+                                                    casque d’Apple...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/894/42cf6503e182648a0209f451295db.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Alors que le casque VR d’Apple pourrait être lancé en fin d’ann�...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Apple ne veut pas du metaverse sur son f...</h5>
+                                                <p class="fst-italic fw-light">lundi 10 janvier 2022</p>
+                                                <p class="card-text">Alors que le casque VR d’Apple pourrait être lancé
+                                                    en fin d’ann�...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/ddf/1a8f22a7f488db89e3d1cc34fabea.jpeg"
+                                                class="card-img-top cards-img-border"
+                                                alt="La nouvelle balance connectée de la marque française innove avec sa ...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Withings dévoile Body Scan, une balance...</h5>
+                                                <p class="fst-italic fw-light">mardi 04 janvier 2022</p>
+                                                <p class="card-text">La nouvelle balance connectée de la marque
+                                                    française innove avec sa ...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/756/1f6a75f5787e43ff02f3186eef265.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Le produit iconique de Xiaomi améliore encore son écran mais augment...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Mi Band 6 : le bracelet connecté de Xia...</h5>
+                                                <p class="fst-italic fw-light">lundi 01 novembre 2021</p>
+                                                <p class="card-text">Le produit iconique de Xiaomi améliore encore son
+                                                    écran mais augment...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/cca/c7e85aecb6d60e40c7cad670a4e51.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Sans grand changement qui saute aux yeux, la Series 7 n’est pas port...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Watch Series 7 : Apple agran...</h5>
+                                                <p class="fst-italic fw-light">mercredi 13 octobre 2021</p>
+                                                <p class="card-text">Sans grand changement qui saute aux yeux, la Series
+                                                    7 n’est pas port...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/e63/ac911eb92ccdca5974fdc4d0ddd0d.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Confortable et tout en finesse, le dernier-né de la marque Fitbit se ...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test du Fitbit Luxe : le bracelet connec...</h5>
+                                                <p class="fst-italic fw-light">jeudi 19 août 2021</p>
+                                                <p class="card-text">Confortable et tout en finesse, le dernier-né de la
+                                                    marque Fitbit se ...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/0927/5a6748473a28683a8c68f9d6e77b.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Très endurante, élégante et dotée de nombreux capteurs, la Watch 3...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Huawei Watch 3 : jolie et end...</h5>
+                                                <p class="fst-italic fw-light">jeudi 05 août 2021</p>
+                                                <p class="card-text">Très endurante, élégante et dotée de nombreux
+                                                    capteurs, la Watch 3...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/885/268e22e730eeef25dcfa434ec8007.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Dotée d’un design simple et plaisant, la Summit Lite tourne sous We...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">Test de la Montblanc Summit Lite : une m...</h5>
+                                                <p class="fst-italic fw-light">mardi 16 mars 2021</p>
+                                                <p class="card-text">Dotée d’un design simple et plaisant, la Summit
+                                                    Lite tourne sous We...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 p-3">
+                                        <div class="card h-100 background-card">
+                                            <img src="https://img.bfmtv.com/i/0/0/5a01ae/af01b4a54b0d60ff84affd8c68.jpg"
+                                                class="card-img-top cards-img-border"
+                                                alt="Commercialisée à partir de 249 euros (329 euros pour le grand modèl...">
+                                            <div class="card-body d-flex flex-column justify-content-between">
+                                                <h5 class="card-title">On a testé l’Oppo Watch, la montre co...</h5>
+                                                <p class="fst-italic fw-light">vendredi 20 novembre 2020</p>
+                                                <p class="card-text">Commercialisée à partir de 249 euros (329 euros
+                                                    pour le grand modèl...</p>
+                                                <a href="#" class="btn background-button-card">Lire la suite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../public/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
